@@ -5,8 +5,8 @@ $the_query_featured = new \WP_Query([
     // "tag" => "featured",
 ]);
 ?>
-
-<?php if ($the_query_featured->have_posts() || true) : ?>
+<h1>ADA NI NAASD</h1>
+<?php if (true) : ?>
     <!-- Slider main container -->
     <div class="swiper w-full max-w-[700px]">
         <!-- Additional required wrapper -->
