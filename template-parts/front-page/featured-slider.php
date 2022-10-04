@@ -1,19 +1,18 @@
 <?php
-$the_query_featured = new WP_Query([
+$the_query_featured = new \WP_Query([
     'posts_per_page'    => 5,
     // 'post_type' => 'post',
-    // "tag" => "featured",
+    "tag" => "featured",
 ]);
 ?>
- <?= var_dump($the_query_featured) ?>
+
 <?php if ($the_query_featured->have_posts()) : ?>
     <!-- Slider main container -->
     <div class="swiper w-full max-w-[700px]">
         <!-- Additional required wrapper -->
         <div class="swiper-wrapper">
             <!-- Slides -->
-            <?php while ($the_query_featured->have_posts()) :  ?>
-                <?php $the_query_featured->the_post(); ?>
+            <?php while ($the_query_featured->have_posts()) : $the_query_featured->the_post() ?>
                 <div class="swiper-slide relative">
 
                     <?= the_post_thumbnail("medium_large", ["class" => "w-full aspect-video object-cover object-center"]) ?>
