@@ -1,8 +1,8 @@
 <?php
 $the_query_featured = new \WP_Query([
     'posts_per_page'    => 5,
-    // 'post_type' => 'post',
-    // "tag" => "featured",
+    'post_type' => 'post',
+    "tag" => "featured",
 ]);
 ?>
 
@@ -46,8 +46,6 @@ $the_query_featured = new \WP_Query([
         <div class="swiper-progressbar"></div>
     </div>
 
-<?php else : ?>
-    <?= var_dump($the_query_featured) ?>
 <?php endif ?>
 
 <?php wp_reset_postdata() ?>
