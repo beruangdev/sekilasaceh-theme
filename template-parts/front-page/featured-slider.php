@@ -22,7 +22,7 @@ $the_query_featured = new \WP_Query([
 
 
                     <div class="absolute bottom-0 left-0 w-full text-white text-2xl font-bold p-4">
-                        <a href="<?= esc_url(get_category_link(get_the_category()[0]->cat_ID)) ?>" class="bg-teal-400 rounded-sm text-white text-xs px-2 py-1 flex flex-wrap w-min mb-1">
+                        <a href="<?= esc_url(get_category_link(get_the_category()[0]->cat_ID)) ?>" class="bg-teal-400 rounded-sm text-white text-xs px-2 py-1 flex flex-wrap mb-1 w-fit">
                             <?= get_the_category()[0]->name ?>
                         </a>
                         <h2><a href="<?= the_permalink() ?>" class="text-lg font-semibold"><?= the_title() ?></a></h2>
