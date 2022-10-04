@@ -5,7 +5,7 @@
         </a>
     </div>
 
-    <div class="ml-4 flex flex-1 flex-col bg-red-200">
+    <div class="ml-4 flex flex-1 flex-col">
         <div>
             <div class="flex justify-between text-base font-medium text-gray-900">
                 <?php the_title(sprintf('<h2 class="entry-title text-lg md:text-2xl font-extra leading-tight mb-1"><a href="%s" rel="bookmark" class="w-full">', esc_url(get_permalink())), '</a></h2>'); ?>
