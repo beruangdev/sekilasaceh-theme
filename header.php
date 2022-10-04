@@ -28,7 +28,7 @@
 
         <div id="content" class="site-content container mx-auto">
             <h1>ADA NI GESSSS ATAS</h1>
-            <?php if (is_front_page()) { ?>
+            <?php if (is_home()) { ?>
                 <h1>ADA NI GESSSS BAWAH</h1>
                 <?php get_template_part('template-parts/front-page/featured-slider'); ?>
             <?php } ?>
