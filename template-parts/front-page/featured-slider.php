@@ -2,7 +2,7 @@
 $the_query_featured = new \WP_Query([
     'posts_per_page'    => 5,
     // 'post_type' => 'post',
-    "tag" => "featured",
+    // "tag" => "featured",
 ]);
 ?>
 
