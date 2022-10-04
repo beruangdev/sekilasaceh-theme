@@ -28,6 +28,7 @@
 
         <div id="content" class="site-content container mx-auto">
             <?php if (is_front_page()) { ?>
+                <h1>ADA NI GESSSS</h1>
                 <?php get_template_part('template-parts/front-page/featured-slider'); ?>
             <?php } ?>
 
