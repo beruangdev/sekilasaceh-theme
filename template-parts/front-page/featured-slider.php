@@ -6,7 +6,7 @@ $the_query_featured = new \WP_Query([
 ]);
 ?>
 
-<?php if ($the_query_featured->have_posts()) : ?>
+<?php if ($the_query_featured->have_posts() || true) : ?>
     <!-- Slider main container -->
     <div class="swiper w-full max-w-[700px]">
         <!-- Additional required wrapper -->
