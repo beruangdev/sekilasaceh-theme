@@ -5,7 +5,7 @@ $the_query = new WP_Query([
     // "tag" => "featured",
 ]);
 ?>
-
+ <?= var_dump($the_query) ?>
 <?php if ($the_query->have_posts()) : ?>
     <!-- Slider main container -->
     <div class="swiper w-full max-w-[700px]">
@@ -46,6 +46,9 @@ $the_query = new WP_Query([
 
         <div class="swiper-progressbar"></div>
     </div>
+
+<?php else : ?>
+    <?= var_dump($the_query) ?>
 <?php endif ?>
 
 <?php wp_reset_postdata() ?>
