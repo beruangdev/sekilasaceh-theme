@@ -1,41 +1,19 @@
-<article id="post-<?php the_ID(); ?>" <?php post_class( 'mb-12' ); ?>>
+<li class="flex py-6" id="post-<?php the_ID(); ?>" <?php post_class('mb-12'); ?>>
+    <div class="h-16 md:h-24 aspect-[16/11] flex-shrink-0 overflow-hidden rounded-md border border-gray-200">
+        <a href="<?= esc_url(get_permalink()) ?>">
+            <?= the_post_thumbnail() ?>
+        </a>
+    </div>
 
-	<header class="entry-header mb-4">
-		<?php the_title( sprintf( '<h2 class="entry-title text-2xl md:text-3xl font-extrabold leading-tight mb-1"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
-		<time datetime="<?php echo get_the_date( 'c' ); ?>" itemprop="datePublished" class="text-sm text-gray-700"><?php echo get_the_date(); ?></time>
-	</header>
-
-	<?php if ( is_search() || is_archive() ) : ?>
-
-		<div class="entry-summary">
-			<?php the_excerpt(); ?>
-		</div>
-
-	<?php else : ?>
-
-		<div class="entry-content">
-			<?php
-			/* translators: %s: Name of current post */
-			the_content(
-				sprintf(
-					__( 'Continue reading %s', 'tailpress' ),
-					the_title( '<span class="screen-reader-text">"', '"</span>', false )
-				)
-			);
-
-			wp_link_pages(
-				array(
-					'before'      => '<div class="page-links"><span class="page-links-title">' . __( 'Pages:', 'tailpress' ) . '</span>',
-					'after'       => '</div>',
-					'link_before' => '<span>',
-					'link_after'  => '</span>',
-					'pagelink'    => '<span class="screen-reader-text">' . __( 'Page', 'tailpress' ) . ' </span>%',
-					'separator'   => '<span class="screen-reader-text">, </span>',
-				)
-			);
-			?>
-		</div>
-
-	<?php endif; ?>
-
-</article>
+    <div class="ml-4 flex flex-1 flex-col">
+        <div>
+            <div class="flex justify-between text-base font-medium text-gray-900">
+                <?php the_title(sprintf('<h2 class="entry-title text-lg md:text-2xl font-extra leading-tight mb-1"><a href="%s" rel="bookmark" class="w-full">', esc_url(get_permalink())), '</a></h2>'); ?>
+            </div>
+        </div>
+        <p style="text-overflow: ellipsis;-webkit-line-clamp: 1;-webkit-box-orient: vertical;display: -webkit-box;overflow: hidden;"><?= substr(get_the_excerpt(), 0, 100) ?></p>
+        <div class="flex flex-1 items-end justify-between text-sm">
+            <time datetime="<?php echo get_the_date('c'); ?>" itemprop="datePublished" class="text-sm text-gray-700"><?php echo get_the_date(); ?></time>
+        </div>
+    </div>
+</li>
