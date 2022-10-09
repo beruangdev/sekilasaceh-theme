@@ -21,11 +21,11 @@
 		"watch:css-app": "cross-env NODE_ENV=development tailwindcss -i ./resources/css/app.scss -o ./css/app.css --postcss --watch",
 		"watch:css-editor": "cross-env NODE_ENV=development tailwindcss -i ./resources/css/editor-style.scss -o ./css/editor-style.css --postcss --watch",
 		"watch:js": "cross-env NODE_ENV=development ./node_modules/.bin/esbuild ./resources/js/app.js --bundle --outfile=./js/app.js --watch",
-		"production": "cross-env NODE_ENV=production concurrently \"pnpm run production:css-app\" \"pnpm run production:css-editor\" \"pnpm run production:js\"",
+		"build": "cross-env NODE_ENV=production concurrently \"pnpm run production:css-app\" \"pnpm run production:css-editor\" \"pnpm run production:js\"",
 		"dev": "cross-env NODE_ENV=development concurrently \"pnpm run dev:css-app\" \"pnpm run dev:css-editor\" \"pnpm run dev:js\"",
 		"watch": "cross-env NODE_ENV=development concurrently \"pnpm run watch:css-app\" \"pnpm run watch:css-editor\" \"pnpm run watch:js\"",
 		"browser-sync": "cross-env NODE_ENV=development browser-sync start --proxy \"lsekilasaceh.test\" --host=\"lsekilasaceh.test\" --no-inject-changes --files=\"./\"",
-		"watch-sync": "cross-env NODE_ENV=development concurrently \"pnpm run browser-sync\" \"pnpm run watch\""
+		"start": "cross-env NODE_ENV=development concurrently \"pnpm run browser-sync\" \"pnpm run watch\""
 	},
 	"devDependencies": {
 		"@jeffreyvr/tailwindcss-tailpress": "^2.0.0",

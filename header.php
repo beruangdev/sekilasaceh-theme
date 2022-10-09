@@ -6,10 +6,16 @@
     <meta name="viewport" content="width=device-width">
     <link rel="profile" href="http://gmpg.org/xfn/11">
     <link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
+    <title>
+        <?php if (is_front_page() && is_home()) {
+            echo get_bloginfo("name");
+        } else {
+            echo wp_title("");
+        } ?>
+    </title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-    
+
     <?php wp_head(); ?>
 
 
@@ -24,7 +30,7 @@
         <?php do_action('tailpress_header'); ?>
 
         <?php get_template_part('template-parts/front-page/navbar'); ?>
-     
+
 
         <div id="content" class="site-content container mx-auto">
             <?php if (is_home()) { ?>

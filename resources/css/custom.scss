@@ -3,6 +3,10 @@ article > *:not(.entry-content),
 	@apply mx-auto max-w-content;
 }
 
+.entry-content p, .entry-content ul, .entry-content ol, .block-editor-block-list__layout p, .block-editor-block-list__layout ul, .block-editor-block-list__layout ol {
+    margin-bottom: 0.5rem !important;
+}
+
 .entry-content,
 .block-editor-block-list__layout {
 	h1 {
