@@ -12,17 +12,17 @@
                         <?php get_template_part('template-parts/content', get_post_format()); ?>
                     <?php endwhile; ?>
                 </ul>
-                <?php get_template_part( 'template-parts/pagination' ); ?>
+                <?php get_template_part('template-parts/pagination'); ?>
             <?php endif; ?>
         </div>
 
 
         <div class="basis-12/12 md:basis-4/12 bg-red-600 hidden md:block h-0"></div>
-        
+
     </div>
 </div>
 
-<?php wp_footer(); ?>
+<?php get_footer(); ?>
 </body>
 
 </html>

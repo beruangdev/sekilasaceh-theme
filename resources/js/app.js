@@ -24,7 +24,13 @@ window.addEventListener('load', function () {
             el.nextElementSibling.classList.toggle("hidden")
         })
     });
-
+    
     // Menu Dropdown END
-
+    
+    this.document.querySelectorAll(".search-submit").forEach(el => {
+        el.addEventListener("click", (e) => {
+            e.preventDefault()
+            el.closest(".wrapper-search").classList.toggle("active")
+        })
+    });
 });

@@ -12,7 +12,8 @@
                         ?>
                     </div>
                 </nav>
-                <div class="-my-2 -mr-2 xl:hidden order-2">
+
+                <div class="-my-2 -mr-2 order-2 xl:hidden">
                     <button type="button" class="inline-flex items-center justify-center rounded-md bg-white p-2 text-gray-400 hover:bg-gray-100 hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-indigo-500 button-menu" aria-expanded="false">
                         <span class="sr-only">Open menu</span>
                         <!-- Heroicon name: outline/bars-3 -->
@@ -21,7 +22,8 @@
                         </svg>
                     </button>
                 </div>
-                <div class="flex order-1 xl:order-2">
+
+                <div class="flex order-2 xl:order-2">
                     <?php if (has_custom_logo()) { ?>
                         <?php
                         $custom_logo_id = get_theme_mod('custom_logo');
@@ -46,19 +48,23 @@
                     <a href="#" class="whitespace-nowrap text-base font-medium text-gray-500 hover:text-gray-900">Sign in</a>
                     <a href="#" class="ml-8 inline-flex items-center justify-center whitespace-nowrap rounded-md border border-transparent bg-indigo-600 px-4 py-2 text-base font-medium text-white shadow-sm hover:bg-indigo-700">Sign up</a>
                 </div> -->
-                <div class="flex-1 xl:flex justify-center px-2 lg:ml-6 order-3 hidden">
-                    <div class="max-w-lg w-full lg:max-w-xs border rounded-xl overflow-auto">
+
+
+                <!-- SEARCH -->
+                <div class="flex-1 flex justify-end px-2 lg:ml-6 order-3">
+                    <div class="max-w-lg lg:max-w-xs border rounded-xl overflow-auto wrapper-search">
                         <label for="search" class="sr-only">Search </label>
-                        <form methode="get" action="<?= esc_url( home_url( '/' ) ); ?>" class="relative z-50">
-                            <button type="submit" id="searchsubmit" class="absolute inset-y-0 left-0 pl-3 flex items-center">
+                        <form methode="get" action="<?= esc_url(home_url('/')); ?>" class="relative pl-10 pr-0">
+                            <button type="button" class="absolute inset-y-0 left-0 pl-3 flex items-center search-submit">
                                 <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
                                     <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
                                 </svg>
                             </button>
-                            <input type="text" name="s" id="search" class="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus:text-gray-900 sm:text-sm transition duration-150 ease-in-out" placeholder="Search" value="<?php the_search_query(); ?>">
+                            <input type="text" name="s" id="search" class="block py-2 border border-transparent rounded-md leading-5 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus:text-gray-900 sm:text-sm w-0" placeholder="Search" value="<?php the_search_query(); ?>">
                         </form>
                     </div>
                 </div>
+                <!-- END SEARCH -->
             </div>
         </div>
 
@@ -94,11 +100,13 @@
                             </button>
                         </div>
                     </div>
+
                     <div class="mt-6">
-                        <div class="flex-1 flex justify-center mb-3">
+                        <!-- Search -->
+                        <!--<div class="flex-1 flex justify-center mb-3">
                             <div class="w-full lg:max-w-xs border rounded-xl overflow-auto">
                                 <label for="search" class="sr-only">Search </label>
-                                <form methode="get" action="<?= esc_url( home_url( '/' ) ); ?>" class="relative z-50">
+                                <form methode="get" action="<?= esc_url(home_url('/')); ?>" class="relative z-50">
                                     <button type="submit" id="searchsubmit" class="absolute inset-y-0 left-0 pl-3 flex items-center">
                                         <svg class="h-5 w-5 text-gray-400" fill="currentColor" viewBox="0 0 20 20">
                                             <path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path>
@@ -107,8 +115,8 @@
                                     <input type="text" name="s" id="search" class="block w-full pl-10 pr-3 py-2 border border-transparent rounded-md leading-5 text-gray-300 placeholder-gray-400 focus:outline-none focus:bg-white focus:text-gray-900 sm:text-sm transition duration-150 ease-in-out" placeholder="Search" value="<?php the_search_query(); ?>">
                                 </form>
                             </div>
-                        </div>
-
+                        </div>-->
+                        <!-- END Search -->
                         <nav class="grid gap-y-8">
 
                             <?= wp_nav_menu([
@@ -120,6 +128,7 @@
 
                         </nav>
                     </div>
+
                 </div>
                 <!-- <div class="space-y-6 py-6 px-5">
                     <div class="grid grid-cols-2 gap-y-4 gap-x-8">

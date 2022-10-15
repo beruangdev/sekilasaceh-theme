@@ -10,7 +10,7 @@
     <?php do_action('tailpress_footer'); ?>
 
     <div class="container mx-auto text-center text-gray-500">
-        &copy; <?php echo date_i18n('Y'); ?> - <?php echo get_bloginfo('name'); ?>
+        <a href="#">Tentang kami</a> | Pedoman Media Siber &copy; <?php echo date_i18n('Y'); ?> - <?php echo get_bloginfo('name'); ?> | Hak cipta dilindungi hukum
     </div>
 </footer>
 

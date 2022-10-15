@@ -1,0 +1,15 @@
+.wrapper-search {
+    @apply transition-all duration-150;
+
+    [name="s"] {
+        @apply w-0 transition-all duration-150;
+    }
+}
+
+.wrapper-search.active {
+    @apply w-full transition-all duration-150;
+    
+    [name="s"] {
+        @apply w-full transition-all duration-150;
+    }
+}
