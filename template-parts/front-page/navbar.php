@@ -1,4 +1,4 @@
-<header class="mb-3">
+<header class="mb-0 xl:mb-3">
     <div class="relative bg-white">
         <div class="mx-auto max-w-7xl px-4 sm:px-6">
             <div class="flex items-center justify-between border-b-2 border-gray-100/0 py-3 xl:justify-start md:space-x-10">
@@ -23,7 +23,7 @@
                     </button>
                 </div>
 
-                <div class="flex order-2 xl:order-2">
+                <div class="flex order-2 xl:order-2 ml-4 xl:ml-0">
                     <?php if (has_custom_logo()) { ?>
                         <?php
                         $custom_logo_id = get_theme_mod('custom_logo');
@@ -31,7 +31,7 @@
                         ?>
 
                         <a href="<?php echo get_bloginfo('url'); ?>">
-                            <img src="<?= $logo[0] ?>" alt="" srcset="" class="h-[30px] md:h-[45px] w-auto">
+                            <img src="<?= $logo[0] ?>" alt="" srcset="" class="h-[35px] md:h-[40px] w-auto">
                         </a>
 
                     <?php } else { ?>
