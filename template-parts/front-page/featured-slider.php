@@ -52,6 +52,10 @@ $the_query_featured = new \WP_Query([
 <script>
     const swiper = new Swiper('.swiper', {
         loop: true,
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
         // If we need pagination
         // pagination: {
         //     el: '.swiper-pagination',

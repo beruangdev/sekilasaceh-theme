@@ -23,7 +23,7 @@
                     </button>
                 </div>
 
-                <div class="flex order-2 xl:order-2 ml-4 xl:ml-0">
+                <div class="flex order-2 xl:order-2 ml-4 xl:ml-0 justify-center">
                     <?php if (has_custom_logo()) { ?>
                         <?php
                         $custom_logo_id = get_theme_mod('custom_logo');
@@ -38,9 +38,9 @@
                         <a href="<?php echo get_bloginfo('url'); ?>" class="font-extrabold text-lg uppercase">
                             <?php echo get_bloginfo('name'); ?>
                         </a>
-                        <p class="text-sm font-light text-gray-600">
+                        <!-- <p class="text-sm font-light text-gray-600">
                             <?php echo get_bloginfo('description'); ?>
-                        </p>
+                        </p> -->
                     <?php } ?>
                 </div>
 
@@ -51,7 +51,7 @@
 
 
                 <!-- SEARCH -->
-                <div class="flex-1 flex justify-end px-2 lg:ml-6 order-3">
+                <div class="xl:flex-1 flex justify-end px-2 lg:ml-6 order-3">
                     <div class="max-w-lg lg:max-w-xs border rounded-xl overflow-auto wrapper-search">
                         <label for="search" class="sr-only">Search </label>
                         <form methode="get" action="<?= esc_url(home_url('/')); ?>" class="relative pl-10 pr-0">
@@ -86,9 +86,9 @@
                                 <a href="<?php echo get_bloginfo('url'); ?>" class="font-extrabold text-lg uppercase">
                                     <?php echo get_bloginfo('name'); ?>
                                 </a>
-                                <p class="text-sm font-light text-gray-600">
+                                <!-- <p class="text-sm font-light text-gray-600">
                                     <?php echo get_bloginfo('description'); ?>
-                                </p>
+                                </p> -->
                             <?php } ?>
                         </div>
                         <div class="-mr-2">
