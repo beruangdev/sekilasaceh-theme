@@ -51,7 +51,7 @@
 
 
                 <!-- SEARCH -->
-                <div class="xl:flex-1 flex justify-end px-2 lg:ml-6 order-3">
+                <div class="lg:flex-1 flex justify-end px-2 lg:ml-6 order-3">
                     <div class="max-w-lg lg:max-w-xs border rounded-xl overflow-auto wrapper-search">
                         <label for="search" class="sr-only">Search </label>
                         <form methode="get" action="<?= esc_url(home_url('/')); ?>" class="relative pl-10 pr-0">
